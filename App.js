@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import {
-  Button,
+  Button
 } from 'week-3-inclass';
 
 export default function App() {
