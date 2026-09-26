@@ -1,15 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import {
-  Button
-} from 'week-3-inclass';
+import { StyleSheet, View } from 'react-native';
+import { Button, Input, List, Tab } from 'week-3-inclass';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Button title="Press me" onPress={() => alert('Button pressed!')} />
-      <StatusBar style="auto" />
+      <Button title="Button" />
+      <Input placeholder="Input" />
+      <List text="List" />
+      <Tab />
+      <StatusBar style="dark" />
     </View>
   );
 }
@@ -19,6 +19,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
+    gap: 16,
     justifyContent: 'center',
+    padding: 24,
   },
 });
