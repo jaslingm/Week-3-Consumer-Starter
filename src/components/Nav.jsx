@@ -1,22 +1,25 @@
 import { usePathname, useRouter } from "expo-router";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { Tab } from "week-3-inclass";
+import HeartRateIcon from "../../assets/heart-rate.svg";
+import HydrationIcon from "../../assets/hydration.svg";
+import SleepIcon from "../../assets/sleep.svg";
 
 const items = [
   {
     label: "Heart Rate",
     href: "/heart-rate",
-    icon: require("../../assets/icon.png"),
+    icon: HeartRateIcon,
   },
   {
     label: "Sleep",
     href: "/sleep",
-    icon: require("../../assets/icon.png"),
+    icon: SleepIcon,
   },
   {
     label: "Hydration",
     href: "/hydration",
-    icon: require("../../assets/icon.png"),
+    icon: HydrationIcon,
   },
 ];
 
@@ -28,6 +31,8 @@ export function Nav() {
     <View style={styles.navigation}>
       {items.map((item) => {
         const active = pathname === item.href;
+        const Icon = item.icon;
+        const foregroundColor = active ? "#FFFFFF" : "#2B2B2B";
 
         return (
           <Tab
@@ -37,11 +42,8 @@ export function Nav() {
             style={styles.item}
           >
             <View style={styles.tabContent}>
-              <Image
-                source={item.icon}
-                style={[styles.icon, active && styles.activeIcon]}
-              />
-              <Text style={[styles.label, active && styles.activeLabel]}>
+              <Icon color={foregroundColor} height={22} width={22} />
+              <Text style={[styles.label, { color: foregroundColor }]}>
                 {item.label}
               </Text>
             </View>
@@ -70,21 +72,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  icon: {
-    height: 22,
-    tintColor: "#2B2B2B",
-    width: 22,
-  },
-  activeIcon: {
-    tintColor: "#FFFFFF",
-  },
   label: {
-    color: "#2B2B2B",
     fontSize: 12,
     lineHeight: 18,
     textAlign: "center",
-  },
-  activeLabel: {
-    color: "#FFFFFF",
   },
 });
