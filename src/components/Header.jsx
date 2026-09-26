@@ -1,15 +1,15 @@
-import { Image, StyleSheet, Text, View } from 'react-native';
-
-const icon = require('../../assets/icon.png');
+import { StyleSheet, Text, View } from 'react-native';
+import HealthIcon from '../../assets/health.svg';
+import ProfileIcon from '../../assets/profile.svg';
 
 export function Header() {
   return (
     <View style={styles.header}>
       <View style={styles.brand}>
-        <Image source={icon} style={styles.icon} />
+        <HealthIcon height={24} width={24} />
         <Text style={styles.title}>Health</Text>
       </View>
-      <Image source={icon} style={styles.profileIcon} />
+      <ProfileIcon height={24} width={24} />
     </View>
   );
 }
@@ -29,14 +29,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     gap: 4,
-  },
-  icon: {
-    height: 24,
-    width: 24,
-  },
-  profileIcon: {
-    height: 24,
-    width: 24,
   },
   title: {
     color: '#000000',
