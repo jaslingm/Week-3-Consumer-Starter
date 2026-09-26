@@ -7,7 +7,7 @@ export default function RootLayout() {
     <>
       <StatusBar style="dark" />
       <SafeAreaView style={{ flex: 1 }} edges={['top', 'bottom']}>
-        <Stack screenOptions={{ headerShown: false }} />
+        <Stack screenOptions={{ animation: 'none', headerShown: false }} />
       </SafeAreaView>
     </>
   );

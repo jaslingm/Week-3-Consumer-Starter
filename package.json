@@ -15,7 +15,7 @@
     "react-native-safe-area-context": "~5.7.0",
     "react-native-screens": "~4.26.0",
     "react-native-web": "^0.21.2",
-    "week-3-inclass": "github:dongsub0918/week-3-inclass#v1.1.0"
+    "week-3-inclass": "github:dongsub0918/week-3-inclass#v1.1.2"
   },
   "scripts": {
     "start": "expo start",
