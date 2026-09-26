@@ -16,7 +16,7 @@
     "react-native-screens": "~4.26.0",
     "react-native-svg": "15.15.4",
     "react-native-web": "^0.21.2",
-    "week-3-inclass": "github:dongsub0918/week-3-inclass#v1.1.2"
+    "week-3-inclass": "github:dongsub0918/week-3-inclass#v1.1.4"
   },
   "scripts": {
     "start": "expo start",
